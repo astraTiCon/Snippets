@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="1236.0" style="-fx-background-color: #efeae3;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <TreeView fx:id="tree" layoutX="22.0" layoutY="14.0" prefHeight="526.0" prefWidth="246.0" />
+        <Button blendMode="DARKEN" layoutX="90.0" layoutY="548.0" mnemonicParsing="false" onAction="#removeButtonAction" prefHeight="40.0" prefWidth="89.0" style="-fx-background-color: linear-gradient(#fcedba, #fc9176);" text="Remove">
+            <effect>
+                <DropShadow color="#00000082" />
+            </effect></Button>
+        <TextField fx:id="textField" layoutX="22.0" layoutY="605.0" onAction="#textFieldAction" prefHeight="25.0" prefWidth="246.0" />
+        <TextArea fx:id="textArea" layoutX="324.0" layoutY="14.0" prefHeight="526.0" prefWidth="858.0" style="-fx-text-fill: #280233; -fx-control-inner-background: #E0D2A8;" wrapText="true" />
+        <Button fx:id="saveButton" layoutX="1077.0" layoutY="568.0" mnemonicParsing="false" onAction="#saveTextAreaContent" prefHeight="49.0" prefWidth="105.0" style="-fx-background-color: linear-gradient(#e8ddab, #c6b76b);" text="Save">
+            <effect>
+                <DropShadow color="#000000ac" height="35.83" radius="18.155" spread="0.15" width="38.79" />
+            </effect></Button>
+    </children>
+</Pane>
