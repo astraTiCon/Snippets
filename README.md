@@ -14,7 +14,7 @@ Hitting save will save the contents of the large text area in a file with the na
 
 # Running it
 
-Clone it `git clone`
+Clone it `git clone https://github.com/astraTiCon/Snippets.git`
 
 Open and run in IntelliJ IDEA, no dependencies required except Java.
 
