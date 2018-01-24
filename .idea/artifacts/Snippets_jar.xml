@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Snippets:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Snippets_jar</output-path>
+    <root id="archive" name="Snippets.jar">
+      <element id="module-output" name="Snippets" />
+    </root>
+  </artifact>
+</component>

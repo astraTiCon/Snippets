@@ -16,12 +16,22 @@ public class Controller{
     @FXML TextArea textArea;
     @FXML Button saveButton;
     private static final String currentWorkingDirectory = Paths.get(".").toAbsolutePath().normalize().toString();
-    static final String treeFilename = currentWorkingDirectory + "\\src\\sample\\data\\tree.dat";
+    private static final String dataDirectory = currentWorkingDirectory + "\\data";
+    static final String treeFilename = dataDirectory + "\\tree.dat";
     static Tree treeDataStructure;
     private String lastNodePressed;
 
     @FXML private void initialize() {
         try {
+            // Create the folder "data" if not already existent
+            File dataDirectoryFileObject = new File(dataDirectory);
+            if (! dataDirectoryFileObject.exists()){
+                boolean exists = dataDirectoryFileObject.mkdir();
+                if (!exists){
+                    throw new FileNotFoundException(dataDirectory + "could not be created");
+                }
+            }
+            // Load Tree data structure, or create it if it doesn't already exist
             if ( new File(treeFilename).exists() ){ // Load Tree data structure from file
                 ObjectInputStream objectInputStream = new ObjectInputStream( new FileInputStream(treeFilename) );
                 treeDataStructure = (Tree) objectInputStream.readObject();
