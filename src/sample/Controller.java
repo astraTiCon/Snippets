@@ -16,8 +16,8 @@ public class Controller{
     @FXML TextArea textArea;
     @FXML Button saveButton;
     private static final String currentWorkingDirectory = Paths.get(".").toAbsolutePath().normalize().toString();
-    private static final String dataDirectory = currentWorkingDirectory + "\\data";
-    static final String treeFilename = dataDirectory + "\\tree.dat";
+    private static final String dataDirectory = currentWorkingDirectory + "\\data\\";
+    static final String treeFilename = dataDirectory + "tree.dat";
     static Tree treeDataStructure;
     private String lastNodePressed;
 
@@ -68,7 +68,7 @@ public class Controller{
 
     @FXML private void saveTextAreaContent(){
         if (lastNodePressed != null){
-            String filePath = currentWorkingDirectory + "\\src\\sample\\data\\" + lastNodePressed + ".txt";
+            String filePath = dataDirectory + lastNodePressed + ".txt";
             String text = textArea.getText();
             try {
                 FileOutputStream fileOutputStream = new FileOutputStream(filePath);
@@ -87,7 +87,7 @@ public class Controller{
 
     private void loadTextArea() throws IOException{ // Once a node is pressed, loads corresponding file content into TextArea
         int buffer;
-        String filePath = currentWorkingDirectory + "\\src\\sample\\data\\" + lastNodePressed + ".txt";
+        String filePath = dataDirectory + lastNodePressed + ".txt";
         File file = new File( filePath );
         StringBuilder stringBuilder = new StringBuilder();
         if (file.exists()){
