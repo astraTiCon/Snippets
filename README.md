@@ -18,3 +18,6 @@ Clone it `git clone https://github.com/astraTiCon/Snippets.git`
 
 Open and run in IntelliJ IDEA, no dependencies required except Java.
 
+# Download 
+
+[Snippets releases](https://github.com/astraTiCon/Snippets/releases)
