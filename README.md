@@ -12,12 +12,6 @@ The **remove** button will remove the last selected node. If said Node has any c
 Hitting **save** will save the contents of the large text area in a file with the name of the last selected node.
 
 
-# Running it
-
-Clone it `git clone https://github.com/astraTiCon/Snippets.git`
-
-Open and run in IntelliJ IDEA, no dependencies required except Java.
-
 # Download 
 
 [Snippets releases](https://github.com/astraTiCon/Snippets/releases)
